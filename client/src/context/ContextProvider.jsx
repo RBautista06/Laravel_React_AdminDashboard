@@ -7,6 +7,7 @@ const StateContext = createContext({
   setToken: () => {},
 });
 
+/// you need to import this in main.jx
 export const ContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [token, _setToken] = useState(localStorage.getItem("ACCESS_TOKEN"));
@@ -34,4 +35,5 @@ export const ContextProvider = ({ children }) => {
   );
 };
 
+// import this when you want to use the store
 export const useStateContext = () => useContext(StateContext);
