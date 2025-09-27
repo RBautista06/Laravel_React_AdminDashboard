@@ -1,10 +1,9 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: `${import.meta.env.LARAVEL_API_KEY}/api`,
+    baseURL: `${import.meta.env.VITE_LARAVEL_API_URL}/api`,
     withCredentials: true,
 });
-
 // before ever y request, axios will automatically:
 // * get token from localStorage
 // * then add it to the requrest Header
